@@ -26,12 +26,10 @@ public class BlackJackGame {
      // dealer shows one card, other is face down     
      System.out.println("YOUR HAND");
      showCards(playersHand); 
-     System.out.println(sumCards(playersHand));
-     System.out.println();
+     System.out.println(sumCards(playersHand) + "\n");
      System.out.println("DEALER");
      System.out.println(dealersHand.peek());
-     System.out.println(cardValue(dealersHand.peek()));
-     System.out.println();    
+     System.out.println(cardValue(dealersHand.peek()) + "\n");
       
      // repeat the main parts of blackjack unless
      // there is a bust or blackjack 
@@ -47,8 +45,7 @@ public class BlackJackGame {
          if(choice.equals("h")) {
             playersHand.add(blackJack.dealCard().toString());
             showCards(playersHand);
-            System.out.println(sumCards(playersHand));
-            System.out.println();
+            System.out.println(sumCards(playersHand) + "\n");
          } else if (choice.equals("s") 
                     && sumCards(playersHand) > sumCards(dealersHand) 
                     && sumCards(dealersHand) > 17) {
@@ -70,7 +67,7 @@ public class BlackJackGame {
             System.out.println(sumCards(dealersHand));
             runGame = checkCards(dealersHand);
             System.out.println();
-            // dealer hits only when card is under 17. Typical rule.
+            // dealer hits only when card is under 17 -> Typical BlackJack rule.
             if(sumCards(dealersHand) < 17) {
                System.out.println(" ..Dealer Hits");
                dealersHand.add(blackJack.dealCard().toString());

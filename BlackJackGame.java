@@ -1,6 +1,5 @@
 // Kris McFarland
-// lab 4 card Game
-// J Ramsey
+// Blackjack card game played in the terminal
 
 import java.util.*;
 
